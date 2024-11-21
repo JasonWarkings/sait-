@@ -8,67 +8,101 @@
     margin: 0;
     box-sizing: inherit;
 }
-/* Основные стили для шапки */
+/* Основные стили для страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 header {
     background-color: #333;
     color: white;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo img {
-    max-height: 50px;
-}
-
-.navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navigation li {
+nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-.navigation a {
+nav ul li a {
+    color: white;
     text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Основной контент */
+main {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.intro h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Блоки с фичами */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
     color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navigation a:hover {
-    color: #f1c40f;
-}
-
-.search input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 14px;
-}
-
-.search button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #f1c40f;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.search button:hover {
-    background-color: #e1b40f;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
